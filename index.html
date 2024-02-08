@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pokemon.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>Document</title>
+</head>
+<body>
+    <section class="content">
+        <h1>Pokedex</h1>
+        <div id="button">
+            <button id="back" onclick="buttonBack()">anterior</button>
+            <button id="next" onclick="buttonNext()">próximo</button>
+        </div>
+        <ol id="pokemonList" class="pokemons">
+        </ol>
+    </section>
+    <section id="info" style="display: none;"">
+        <div id="info-back" onclick="altern()"><span class="material-symbols-outlined">arrow_back_ios</span></div>
+        <div id="info-detail">
+            <div id="info-header">
+                <span id="detail-name"><h1></h1></span>
+                <ol id="info-types">
+                    <li id="info-type0" class="type"></li>
+                    <li id="info-type1" class="type"></li>
+                </ol>
+            </div>
+            <img id="info-img" src="">
+            <div id="info-content">
+                <div id="info-title">
+                    <h3 class="info-about" style ="text-decoration: underline; cursor: pointer;" onclick="alternTitle(this)">About</h3>
+                    <h3 class="info-stats" style ="text-decoration: none; cursor: pointer;" onclick="alternTitle(this)">Stats</h3>
+                </div>
+                <div class="info-about" style="display: flex; flex-direction: column;">
+                    <ol>
+                        <li class="order"></li>
+                        <li class="abilities"></li>
+                        <li class="height"></li>
+                        <li class="weight"></li>
+                    </ol>
+                </div>
+                <div class="info-stats" style="display: none;">
+                    <ol id="info-stats-list"></ol>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <script src="script.js"></script>
+    <script src="poke-api.js"></script>
+</body>
+</html>
